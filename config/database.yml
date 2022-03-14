@@ -23,7 +23,7 @@ test:
 production:
   <<: *default
   adapter: postgresql
-      encoding: unicode
-      database: katalog_api_production
-      username: katalog_api
-      password: <%= ENV["KATALOG_API_DATABASE_PASSWORD"] %>
+  encoding: unicode
+  database: katalog_api_production
+  username: katalog_api
+  password: <%= ENV["KATALOG_API_DATABASE_PASSWORD"] %>
