@@ -1,0 +1,12 @@
+<h2>Hello<%= user_signed_in? ? " #{current_user.email}" : "" %></h2>
+<p>
+  The time is now: <%= Time.now %>
+</p>
+
+<p>
+  <% if user_signed_in? %>
+    <%= link_to 'Sign-Out', destroy_session_path(:user), data: { "turbo-method": :delete }  %>
+  <% else %>
+    <%= link_to 'Sign-In', new_session_path(:user) %>
+  <% end %>
+</p>
