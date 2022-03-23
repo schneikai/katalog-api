@@ -1,0 +1,6 @@
+{
+  id: asset.id,
+  title: asset.title,
+  created_at: asset.created_at,
+  updated_at:asset.updated_at,
+}

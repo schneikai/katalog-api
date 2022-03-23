@@ -1,0 +1,1 @@
+render partial: 'api/v1/assets/asset', collection: @assets, as: :asset
