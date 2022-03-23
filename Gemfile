@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.0.3"
+ruby "2.7.5"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.2", ">= 7.0.2.3"
@@ -46,8 +46,19 @@ gem "sassc-rails"
 # gem "image_processing", "~> 1.2"
 
 gem "devise"
+# gem 'jwt'
+gem 'devise-jwt'
+gem 'rack-cors'
 
 gem "activeadmin"
+
+gem 'jb'
+
+gem 'simple_command'
+
+# Fixes warnings about redefined constants in net-http when starting rails or running tests
+# https://stackoverflow.com/questions/67773514/getting-warning-already-initialized-constant-on-assets-precompile-at-the-time
+gem 'net-http'
 
 group :production do
   # Use postgresql as the database for Active Record
@@ -57,11 +68,13 @@ end
 group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem "sqlite3", "~> 1.4"
-end
 
-group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+
+  gem "factory_bot_rails"
+  gem "faker"
+  # gem "byebug"
 end
 
 group :development do
@@ -73,6 +86,9 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+
+  gem "rubocop"
+  gem "reek"
 end
 
 group :test do
