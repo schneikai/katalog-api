@@ -1,0 +1,11 @@
+{
+  "ruby.lint": {
+      "rubocop": {
+          "useBundler": true // enable rubocop via bundler
+      },
+      "reek": {
+          "useBundler": true // enable reek via bundler
+      }
+  },
+  "ruby.format": "rubocop", // use rubocop for formatting
+}

@@ -1,0 +1,14 @@
+{
+  // See http://go.microsoft.com/fwlink/?LinkId=827846
+  // for the documentation about the extensions.json format
+  "recommendations": [
+    // Switch between code and test files in Rails
+    "simonbo.rails-go-to-test",
+    // Ruby language support and debugging for Visual Studio Code
+    "rebornix.ruby",
+    // Syntax highlighing, snippet, and language configuration support for Ruby
+    "wingrunr21.vscode-ruby",
+    // Document Ruby source code with YARD
+    "pavlitsky.yard"
+  ]
+}
